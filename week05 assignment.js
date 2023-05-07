@@ -33,7 +33,7 @@ class Garage {
 class Menu {                    //created menu class 
     constructor() {
         this.garages = [];      //created values for garages as empty array to be able to input and add garages later on.
-        this.selectedGarage = null; //created values for selectedGarage to null so it can start at none or no value until later selected.
+        this.selectedGarage = null; //created values for selectedGarage to null so it can start at none or no value until later selected one by one.
     }
 
     start() {                                           //created start function inside menu class to start the application
@@ -120,7 +120,7 @@ class Menu {                    //created menu class
     deleteGarage() {                                                                //created delete car function for input to be added by user input.
         let index = prompt(`Enter the index of the garage you wish to delete: `);
         if (index > -1 && index < this.selectedGarage.garages.length){
-            this.selectedGarage.garages.splice(index,1);
+            this.selectedGarage.garages.splice(index, 1);
         }
     }
 
